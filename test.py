@@ -10,9 +10,9 @@ df = pd.read_csv('data/indexProcessed.csv')
 def connect_to_s3():
     try:
         s3 = s3fs.S3FileSystem(anon=False,
-                               key= 'AKIA57VDLVSDNWWZ6ZMV',
-                               secret='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',
-                               client_kwargs={'region_name': 'us-east-1'})
+                               key= 'AWS_ACCESS_KEY',
+                               secret='AWS_SECRET_KEY',
+                               client_kwargs={'region_name': 'Location'})
         return s3
     except Exception as e:
         print(e)
